@@ -1,3 +1,4 @@
+// https://eslint.bootcss.com/docs/rules/
 module.exports = {
 	env: {
 		browser: true,
@@ -20,5 +21,6 @@ module.exports = {
 		'no-param-reassign': 'error',
 		'comma-dangle': ['error', 'only-multiline'],
 		'semi-style': ['error', 'last'],
+		'no-console': 2,
 	},
 };
