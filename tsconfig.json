@@ -1,8 +1,19 @@
 {
-  "include": ["*"],
+  "include": ["src/*"],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
+    "baseUrl": ".",
+    "strict": true,
+    "rootDir": ".",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "target": "es2016",
+    "module": "esnext",
+    "removeComments": true,
+    "preserveConstEnums": true,
     "sourceMap": true,
+    "downlevelIteration": true,
+    "lib": ["esnext"],
     "outDir": "dist",
     "declaration": true,
     "declarationDir": "."
