@@ -1,0 +1,10 @@
+{
+  "include": ["*"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "."
+  }
+}
