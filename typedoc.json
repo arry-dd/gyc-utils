@@ -11,5 +11,6 @@
 	"hideGenerator": true,
 	// 输出选项 - 禁用描述代码位置
 	"disableSources": true,
-	"cleanOutputDir": true
+	"cleanOutputDir": true,
+	"githubPages": false
 }
