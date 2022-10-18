@@ -1,5 +1,4 @@
 {
-	"$schema": "https://typedoc.org/schema.json",
 	"include": ["src/*"],
 	"exclude": ["node_modules", "dist"],
 	"compilerOptions": {
@@ -17,6 +16,9 @@
 		"lib": ["esnext", "dom"],
 		"declaration": true,
 		"declarationDir": ".",
-		"noEmitOnError": true
+		"noEmitOnError": true,
+		"paths": {
+			"@/*": ["src/*"]
+		}
 	}
 }
