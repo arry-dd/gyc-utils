@@ -2,6 +2,7 @@
  * @description 格式化日期
  * @param value 指定日期
  * @param format 返回的日期样式模板
+ * @param defaultRes 假如日期格式错误，则返回这个值
  * @return {string}
  * @example
  * formatDate();
@@ -10,16 +11,17 @@
  * formatDate(1666064012000, "Y年M月D日") => 2022年10月18日
  * formatDate('Tue Oct 18 2022 14:08:59 GMT+0800 (中国标准时间)', 'Y/M/D h:m:s') => 2022/10/18 14:08:59
  * formatDate(new Date(1666064012000), 'Y/M/D h:m:s') => 2022/10/18 11:33:32
- * new Date('错误的日期') => ''
+ * new Date('错误的日期', "h:m:s", '-') => '-'
  */
 export function formatDate(
 	value: string | number | Date = Date.now(),
-	format = 'Y-M-D h:m:s'
+	format = 'Y-M-D h:m:s',
+	defaultRes = ''
 ): string {
 	const formatNumber = (n: number): string => `0${n}`.slice(-2);
 	const date = new Date(value);
 	if (isNaN(date.getSeconds())) {
-		return '';
+		return defaultRes;
 	}
 	const formatList = ['Y', 'M', 'D', 'h', 'm', 's'];
 	const resultList = [];

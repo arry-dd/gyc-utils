@@ -36,5 +36,6 @@ describe('格式化时间测试', () => {
 
 	test('传递错误的日期', () => {
 		expect(formatDate(new Date('错误的日期'))).toBe('');
+		expect(formatDate(new Date('错误的日期'), undefined, '-')).toBe('-');
 	});
 });
