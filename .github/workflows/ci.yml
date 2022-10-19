@@ -9,8 +9,6 @@ jobs:
   CI:
     runs-on: ubuntu-latest
     steps:
-      - name: 设置时区
-        run: timedatectl set-timezone Asia/Shanghai
       # 拉取项目代码
       - name: Checkout repository
         uses: actions/checkout@v2
