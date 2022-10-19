@@ -13,8 +13,7 @@
  * formatDate(new Date(1666064012000), 'Y/M/D h:m:s') => 2022/10/18 11:33:32
  * new Date('错误的日期', "h:m:s", '-') => '-'
  */
-export function formatDate(
-	value: string | number | Date = Date.now(),
+export function formatDate(value: string | number | Date = Date.now(),
 	format = 'Y-M-D h:m:s',
 	defaultRes = ''
 ): string {
@@ -33,7 +32,8 @@ export function formatDate(
 	resultList.push(formatNumber(date.getSeconds()));
 	let res = format;
 	for (let i = 0; i < resultList.length; i += 1) {
-		res = res.replace(formatList[i], resultList[i]);
+		format = format.replace(formatList[i], resultList[i]);
 	}
-	return res;
+	return format;
 }
+const a = 'dfjlskdjfslkdjflskdjfldskjfklsdjfklsdjflksdjlfkjdslkfjsldkjgioldfjgifdojgidofjgiodfgjoidfjgiodfjgiofdjgiodfjgiodfjgoijdfoigjdfiogjoifdjgiodfjgoidfjgoidfjgoidfjgoidfjgiodfjgiodfjgoijdfiogjdfiojgoidfjgoidfjgoid'
