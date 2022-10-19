@@ -26,7 +26,9 @@ describe('格式化时间测试', () => {
 	test('传字符串', () => {
 		expect(
 			formatDate(
-				'Tue Oct 18 2022 14:08:59 GMT+0800 (中国标准时间)',
+				`Tue Oct 18 2022 14:08:59 GMT+0${-(
+					new Date().getTimezoneOffset() / 60
+				)}00 (中国标准时间)`,
 				'Y/M/D h:m:s'
 			)
 		).toBe('2022/10/18 14:08:59');
