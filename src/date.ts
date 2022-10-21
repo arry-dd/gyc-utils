@@ -37,3 +37,21 @@ export function formatDate(
 	}
 	return res;
 }
+
+/**
+ * @description 秒数转为显示时间
+ * @param  second 秒数
+ * @returns xx:xx:xx
+ * @example
+ * formatSecond(1) => '00:00:01'
+ * formatSecond(3600) => '01:00:00'
+ */
+export function formatSecond(second: number): string {
+	const hour = parseInt(`${second / 3600}`, 10);
+	const minu = parseInt(`${(second / 60) % 60}`, 10);
+	const sec = parseInt(`${second % 60}`, 10);
+	return `${String(hour).padStart(2, '0')}:${String(minu).padStart(
+		2,
+		'0'
+	)}:${String(sec).padStart(2, '0')}`;
+}
