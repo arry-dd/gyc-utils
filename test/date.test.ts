@@ -1,6 +1,6 @@
-import { formatDate } from '../src/index';
+import { formatDate, formatSecond } from '../src/index';
 
-describe('格式化时间测试', () => {
+describe('formatDate测试', () => {
 	let numberTime = 1666064012000;
 	beforeEach(() => {
 		// 适配时区
@@ -43,5 +43,17 @@ describe('格式化时间测试', () => {
 	test('传递错误的日期', () => {
 		expect(formatDate(new Date('错误的日期'))).toBe('');
 		expect(formatDate(new Date('错误的日期'), undefined, '-')).toBe('-');
+	});
+});
+
+describe('formatSecond测试', () => {
+	test('正常输出格式', () => {
+		expect(formatSecond(1)).toBe('00:00:01');
+		expect(formatSecond(20)).toBe('00:00:20');
+		expect(formatSecond(59)).toBe('00:00:59');
+		expect(formatSecond(60)).toBe('00:01:00');
+		expect(formatSecond(3600)).toBe('01:00:00');
+		expect(formatSecond(78029)).toBe('21:40:29');
+		expect(formatSecond(324324324324)).toBe('90090090:05:24');
 	});
 });
