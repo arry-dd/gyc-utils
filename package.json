@@ -5,6 +5,10 @@
 	"module": "dist/index.esm.js",
 	"browser": "dist/index.umd.js",
 	"type": "module",
+	"description": "开发工具库",
+	"author": "儒雅随和",
+	"homepage": "https://arry-dd.github.io/rysh-utils/",
+	"repository": "https://github.com/arry-dd/rysh-utils",
 	"devDependencies": {
 		"@commitlint/config-conventional": "^17.1.0",
 		"@rollup/plugin-commonjs": "^23.0.0",
